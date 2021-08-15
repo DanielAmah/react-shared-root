@@ -9,9 +9,7 @@ function importBuildTarget() {
   } else if (process.env.REACT_APP_BUILD_TARGET === "test") { 
     return import("./test.js"); 
   } else { 
-    return Promise.reject(
-      new Error("No such build target: " + process.env.REACT_APP_BUILD_TARGET)
-    ); 
+    return import("./app.js"); 
   } 
 } 
 
